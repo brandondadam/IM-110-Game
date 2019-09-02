@@ -293,6 +293,11 @@ PrefabInstance:
       propertyPath: otherBackground
       value: 
       objectReference: {fileID: 529303680}
+    - target: {fileID: 6113045734575136500, guid: ed17c9774b1d9429691f30669b496aaf,
+        type: 3}
+      propertyPath: backgroundSpeed
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed17c9774b1d9429691f30669b496aaf, type: 3}
 --- !u!1001 &4339792522779654622
@@ -367,5 +372,10 @@ PrefabInstance:
       propertyPath: otherBackground
       value: 
       objectReference: {fileID: 438181985}
+    - target: {fileID: 6113045734575136500, guid: ed17c9774b1d9429691f30669b496aaf,
+        type: 3}
+      propertyPath: backgroundSpeed
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed17c9774b1d9429691f30669b496aaf, type: 3}
