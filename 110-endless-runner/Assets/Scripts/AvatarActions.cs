@@ -6,7 +6,6 @@ public class AvatarActions : MonoBehaviour
 {
     bool canJump = true;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.J))

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundMovement : MonoBehaviour
 {
-    public float backgroundSpeed = -5f;
+    public float backgroundSpeed = -2f;
     public GameObject otherBackground;
 
     public int showBackground1 = 25;
