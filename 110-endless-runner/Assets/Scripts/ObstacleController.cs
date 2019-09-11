@@ -15,4 +15,10 @@ public class ObstacleController : MonoBehaviour
             Object.Destroy(gameObject);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        print("Bam!");
+        Object.Destroy(gameObject);
+    }
 }
