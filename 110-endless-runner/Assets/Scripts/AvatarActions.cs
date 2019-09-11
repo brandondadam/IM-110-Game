@@ -21,5 +21,11 @@ public class AvatarActions : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         canJump |= collision.gameObject.tag == "Ground";
+
+        //short hand for.
+        /*if (collision.gameObject.tag == "Ground")
+        {
+            canJump = true;
+        }*/
     }
 }
