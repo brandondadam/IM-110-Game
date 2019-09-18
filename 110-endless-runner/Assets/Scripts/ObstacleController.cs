@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class ObstacleController : MonoBehaviour
 {
-    public float objectSpeed = 5f;
+    public float speedAdjustment = 1f;
+    bool dodgedEnemy = false;
 
     void Update()
     {
-        transform.position += Vector3.left * Time.deltaTime * objectSpeed;
+
+        if (AvatarActions.playerAlive)
+        {
+            transform.position += Vector3.left * Time.deltaTime * (GlobalValues.gameSpeed + speedAdjustment);
+        }
+
+        if (transform.position.x <= -7.5f && !dodgedEnemy)
+        {
+            dodgedEnemy = true;
+            AvatarActions.score += 10;
+        }
 
         if (transform.position.x < -10)
         {
@@ -20,5 +31,6 @@ public class ObstacleController : MonoBehaviour
     {
         print("Bam!");
         Object.Destroy(gameObject);
+        AvatarActions.playerAlive = false;
     }
 }

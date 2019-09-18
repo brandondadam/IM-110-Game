@@ -1,10 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AvatarActions : MonoBehaviour
 {
     bool canJump = true;
+    public Text scoreText;
+    public static int score;
+    public static bool playerAlive = true;
+
+    void Start()
+    {
+        InvokeRepeating("UpdateScore", 0f, 1f);
+    }
+
+    void UpdateScore ()
+    {
+       if (AvatarActions.playerAlive)
+       {
+            score++;
+            scoreText.text = "Score: " + score;
+       }
+    }
 
     void Update()
     {

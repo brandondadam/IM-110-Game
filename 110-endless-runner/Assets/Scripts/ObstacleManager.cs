@@ -13,7 +13,10 @@ public class ObstacleManager : MonoBehaviour
 
     void CreateObstacle ()
     {
-        GameObject obj = Instantiate(obstaclePrefab, transform);
-		obj.transform.position = new Vector3(9f, -3f, -1f);
+        if (AvatarActions.playerAlive)
+        { 
+            GameObject obj = Instantiate(obstaclePrefab, transform);
+            obj.transform.position = new Vector3(9f, -3f, -1f);
+        }
 	}
 }
